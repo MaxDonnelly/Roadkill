@@ -15,6 +15,7 @@ namespace Roadkill
     {
         Graphics g; // declare the graphics object
         int x = 190, y = 450;// starting position of character
+        int lives = 5;
         bool left, right, up, down;
         //Declare the objects
         Rectangle area1;
@@ -26,12 +27,12 @@ namespace Roadkill
         Rectangle area7;
         Rectangle area8;
         Rectangle character1;
-        int x2 = 50, y2 = 52; //starting position of car1
+        int x2 = 50, y2 = 60; //starting position of car1
         int x3 = 75, y3 = 253; //starting position of car2
-        int x4 = 250, y4 = 208; //starting position of car3
+        int x4 = 250, y4 = 213; //starting position of car3
         int x5 = 125, y5 = 177; //starting position of car4
-        int x6 = 150, y6 = 397; //starting position of car5
-        int x7 = 305, y7 = 350; //starting position of car6
+        int x6 = 150, y6 = 400; //starting position of car5
+        int x7 = 305, y7 = 361; //starting position of car6
         int x8 = 250, y8 = 116; //starting position of train1
         int x9 = 305, y9 = 307; //starting position of train2
         //Load our images from the bin\debug folder
@@ -102,6 +103,20 @@ namespace Roadkill
         Image car6 = Image.FromFile(Application.StartupPath + @"\White Car.png");
         Image train1 = Image.FromFile(Application.StartupPath + @"\Train.png");
         Image train2 = Image.FromFile(Application.StartupPath + @"\Train2.png");
+        
+        //the CheckLives method will stop the planets and spaceship moving if there are no lives left
+        // and a game over message will be displayed  
+        private void CheckLives()
+        {
+            if (lives == 0)
+            {
+                TmrCharacter.Enabled = false;
+                TmrCar.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
+
         private void FrmRoadkill_KeyUp(object sender, KeyEventArgs e)
         {
             {
@@ -124,6 +139,17 @@ namespace Roadkill
 
         private void TmrCharacter_Tick(object sender, EventArgs e)
         {
+            //if spaceship collides with any planet lose a life and move planet to the top of the panel
+            if (area1.IntersectsWith(character1))
+            {
+                area1.Y = 20;
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+
             if (left) // if left arrow pressed
             {
                 if (character1.X < 10) //check to see if character within 10 of left side
@@ -169,8 +195,6 @@ namespace Roadkill
                 {
                     character1.Y += 5;
                 }
-                //Specifies a 180-degree rotation without flipping
-                pictureBox1.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
             }
             PnlGame.Invalidate();
         }
@@ -198,12 +222,12 @@ namespace Roadkill
             InitializeComponent();
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PnlGame, new object[] { true });
-            area1 = new Rectangle(x2, y2, 43, 43);//car1's rectangle size	
+            area1 = new Rectangle(x2, y2, 43, 25);//car1's rectangle size	
             area2 = new Rectangle(x3, y3, 43, 23);//car2's rectangle size
-            area3 = new Rectangle(x4, y4, 47, 37);//car3's rectangle size
+            area3 = new Rectangle(x4, y4, 47, 27);//car3's rectangle size
             area4 = new Rectangle(x5, y5, 40, 25);//car4's rectangle size
-            area5 = new Rectangle(x6, y6, 40, 30);//car5's rectangle size
-            area6 = new Rectangle(x7, y7, 55, 50);//car6's rectangle size
+            area5 = new Rectangle(x6, y6, 40, 25);//car5's rectangle size
+            area6 = new Rectangle(x7, y7, 50, 27);//car6's rectangle size
             area7 = new Rectangle(x8, y8, 190, 25);//train1's rectangle size 
             area8 = new Rectangle(x9, y9, 190, 25);//train2's rectangle size
             character1 = new Rectangle(x, y, 35, 30); //character's rectangle size
