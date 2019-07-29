@@ -139,7 +139,7 @@ namespace Roadkill
 
         private void TmrCharacter_Tick(object sender, EventArgs e)
         {
-            //if spaceship collides with any planet lose a life and move planet to the top of the panel
+            //if Character collides with any Car or Train, Game Over!
             if (area1.IntersectsWith(character1))
             {
                 lives -= 1; // reduce lives by 1
@@ -148,6 +148,63 @@ namespace Roadkill
 
                 CheckLives();
             }
+            if (area2.IntersectsWith(character1))
+            {
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+            if (area3.IntersectsWith(character1))
+            {
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+            if (area4.IntersectsWith(character1))
+            {
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+            if (area5.IntersectsWith(character1))
+            {
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+            if (area6.IntersectsWith(character1))
+            {
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+            if (area7.IntersectsWith(character1))
+            {
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+            if (area8.IntersectsWith(character1))
+            { 
+                lives -= 1; // reduce lives by 1
+                            //display the number of lives on the form
+                LblLives.Text = lives.ToString();
+
+                CheckLives();
+            }
+            // CHARACTER MOVEMENTS
 
             if (left) // if left arrow pressed
             {
@@ -229,7 +286,7 @@ namespace Roadkill
             area6 = new Rectangle(x7, y7, 50, 27);//car6's rectangle size
             area7 = new Rectangle(x8, y8, 190, 25);//train1's rectangle size 
             area8 = new Rectangle(x9, y9, 190, 25);//train2's rectangle size
-            character1 = new Rectangle(x, y, 35, 30); //character's rectangle size
+            character1 = new Rectangle(x, y, 25, 20); //character's rectangle size
 
         }
 
