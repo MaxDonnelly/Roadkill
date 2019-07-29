@@ -15,7 +15,7 @@ namespace Roadkill
     {
         Graphics g; // declare the graphics object
         int x = 190, y = 450;// starting position of character
-        int lives = 5;
+        int lives = 1;
         bool left, right, up, down;
         //Declare the objects
         Rectangle area1;
@@ -142,7 +142,6 @@ namespace Roadkill
             //if spaceship collides with any planet lose a life and move planet to the top of the panel
             if (area1.IntersectsWith(character1))
             {
-                area1.Y = 20;
                 lives -= 1; // reduce lives by 1
                             //display the number of lives on the form
                 LblLives.Text = lives.ToString();
