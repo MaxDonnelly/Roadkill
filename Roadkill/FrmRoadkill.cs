@@ -42,14 +42,14 @@ namespace Roadkill
 
         private void TmrCar_Tick(object sender, EventArgs e)
         {
-            area1.X -= 24;// move the area(car) across the panel
-            area2.X += 25;// move the area(car) across the panel
-            area3.X -= 23;// move the area(car) across the panel
-            area4.X += 20;// move the area(car) across the panel
-            area5.X -= 22;// move the area(car) across the panel
-            area6.X += 20;// move the area(car) across the panel
-            area7.X += 45;// move the area(train) across the panel
-            area8.X -= 45;// move the area(train) across the panel
+            area1.X -= 32;// move the area(car) across the panel
+            area2.X += 30;// move the area(car) across the panel
+            area3.X -= 32;// move the area(car) across the panel
+            area4.X += 30;// move the area(car) across the panel
+            area5.X -= 29;// move the area(car) across the panel
+            area6.X += 26;// move the area(car) across the panel
+            area7.X += 57;// move the area(train) across the panel
+            area8.X -= 57;// move the area(train) across the panel
             if (area1.X < -25) //AREA 1,3 AND 5 ARE CARS GOING LEFT
             {
                 area1.X = 500;
@@ -95,6 +95,7 @@ namespace Roadkill
         {
             TmrCar.Enabled = false; 
             TmrCharacter.Enabled = false;
+            Application.Exit();//ends the program
         }
 
         Image car3 = Image.FromFile(Application.StartupPath + @"\Police Car.png");
@@ -113,7 +114,7 @@ namespace Roadkill
                 TmrCharacter.Enabled = false;
                 TmrCar.Enabled = false;
                 MessageBox.Show("Game Over");
-
+                Application.Exit();//ends the program
             }
         }
 
@@ -286,7 +287,7 @@ namespace Roadkill
             area6 = new Rectangle(x7, y7, 50, 27);//car6's rectangle size
             area7 = new Rectangle(x8, y8, 190, 25);//train1's rectangle size 
             area8 = new Rectangle(x9, y9, 190, 25);//train2's rectangle size
-            character1 = new Rectangle(x, y, 25, 20); //character's rectangle size
+            character1 = new Rectangle(x, y, 20, 15); //character's rectangle size
 
         }
 
