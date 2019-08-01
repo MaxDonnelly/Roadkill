@@ -31,7 +31,7 @@ namespace Roadkill
         int x2 = 50, y2 = 60; //starting position of car1
         int x3 = 75, y3 = 253; //starting position of car2
         int x4 = 250, y4 = 213; //starting position of car3
-        int x5 = 125, y5 = 177; //starting position of car4
+        int x5 = 300, y5 = 177; //starting position of car4
         int x6 = 150, y6 = 400; //starting position of car5
         int x7 = 305, y7 = 361; //starting position of car6
         int x10 = 0, y10 = 15; //starting position of block1
@@ -45,9 +45,9 @@ namespace Roadkill
         private void TmrCar_Tick(object sender, EventArgs e)
         {
             area1.X -= 32;// move the area(car) across the panel
-            area2.X += 30;// move the area(car) across the panel
-            area3.X -= 32;// move the area(car) across the panel
-            area4.X += 30;// move the area(car) across the panel
+            area2.X += 32;// move the area(car) across the panel
+            area3.X -= 33;// move the area(car) across the panel
+            area4.X += 29;// move the area(car) across the panel
             area5.X -= 29;// move the area(car) across the panel
             area6.X += 26;// move the area(car) across the panel
             area7.X += 57;// move the area(train) across the panel
@@ -282,6 +282,7 @@ namespace Roadkill
             //use the DrawImage method to draw the train on the panel
             g.DrawImage(train1, area7);
             g.DrawImage(train2, area8);
+            //use the DrawImage method to draw the block on the panel
             g.DrawImage(block1, area9);
 
         }
