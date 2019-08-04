@@ -44,10 +44,10 @@ namespace Roadkill
 
         private void TmrCar_Tick(object sender, EventArgs e)
         {
-            area1.X -= 32;// move the area(car) across the panel
+            area1.X -= 40;// move the area(car) across the panel
             area2.X += 32;// move the area(car) across the panel
             area3.X -= 33;// move the area(car) across the panel
-            area4.X += 29;// move the area(car) across the panel
+            area4.X += 27;// move the area(car) across the panel
             area5.X -= 29;// move the area(car) across the panel
             area6.X += 26;// move the area(car) across the panel
             area7.X += 57;// move the area(train) across the panel

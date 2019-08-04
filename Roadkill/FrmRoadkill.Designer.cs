@@ -36,17 +36,16 @@
             this.PnlGame = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.LblLives = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuQuit = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.PnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -103,16 +102,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // menuStrip1
+            // LblLives
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MnuStart,
-            this.MnuQuit});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.LblLives.AutoSize = true;
+            this.LblLives.Location = new System.Drawing.Point(429, 8);
+            this.LblLives.Name = "LblLives";
+            this.LblLives.Size = new System.Drawing.Size(0, 13);
+            this.LblLives.TabIndex = 6;
             // 
             // MnuStart
             // 
@@ -130,30 +126,22 @@
             this.MnuQuit.Text = "QUIT";
             this.MnuQuit.Click += new System.EventHandler(this.MnuQuit_Click);
             // 
-            // LblLives
+            // menuStrip1
             // 
-            this.LblLives.AutoSize = true;
-            this.LblLives.Location = new System.Drawing.Point(429, 8);
-            this.LblLives.Name = "LblLives";
-            this.LblLives.Size = new System.Drawing.Size(13, 13);
-            this.LblLives.TabIndex = 6;
-            this.LblLives.Text = "1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(395, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Lives:";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuStart,
+            this.MnuQuit});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // FrmRoadkill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 561);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.LblLives);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PnlGame);
@@ -168,9 +156,9 @@
             this.PnlGame.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,12 +172,11 @@
         private System.Windows.Forms.Timer TmrCar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MnuStart;
-        private System.Windows.Forms.ToolStripMenuItem MnuQuit;
         private System.Windows.Forms.Label LblLives;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem MnuStart;
+        private System.Windows.Forms.ToolStripMenuItem MnuQuit;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
