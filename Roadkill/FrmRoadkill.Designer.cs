@@ -37,15 +37,18 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblLives = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.TxtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.LblLevel = new System.Windows.Forms.Label();
             this.PnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -137,11 +140,39 @@
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // TxtName
+            // 
+            this.TxtName.Location = new System.Drawing.Point(372, 4);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(100, 20);
+            this.TxtName.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(328, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Name:";
+            // 
+            // LblLevel
+            // 
+            this.LblLevel.AutoSize = true;
+            this.LblLevel.Location = new System.Drawing.Point(150, 7);
+            this.LblLevel.Name = "LblLevel";
+            this.LblLevel.Size = new System.Drawing.Size(13, 13);
+            this.LblLevel.TabIndex = 9;
+            this.LblLevel.Text = "1";
+            // 
             // FrmRoadkill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 561);
+            this.Controls.Add(this.LblLevel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtName);
             this.Controls.Add(this.LblLives);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PnlGame);
@@ -156,9 +187,9 @@
             this.PnlGame.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,10 +204,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label LblLives;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ToolStripMenuItem MnuStart;
         private System.Windows.Forms.ToolStripMenuItem MnuQuit;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Label LblLevel;
     }
 }
 

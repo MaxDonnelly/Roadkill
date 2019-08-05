@@ -16,6 +16,7 @@ namespace Roadkill
         Graphics g; // declare the graphics object
         int x = 190, y = 480;// starting position of character
         int lives = 1;
+        int level = 1;
         bool left, right, up, down;
         //Declare the objects
         Rectangle area1;
@@ -44,14 +45,50 @@ namespace Roadkill
 
         private void TmrCar_Tick(object sender, EventArgs e)
         {
-            area1.X -= 40;// move the area(car) across the panel
-            area2.X += 32;// move the area(car) across the panel
-            area3.X -= 33;// move the area(car) across the panel
-            area4.X += 27;// move the area(car) across the panel
-            area5.X -= 29;// move the area(car) across the panel
-            area6.X += 26;// move the area(car) across the panel
-            area7.X += 57;// move the area(train) across the panel
-            area8.X -= 57;// move the area(train) across the panel
+            if (level == 1)
+            {
+                area1.X -= 30;// move the area(car) across the panel
+                area2.X += 22;// move the area(car) across the panel
+                area3.X -= 23;// move the area(car) across the panel
+                area4.X += 17;// move the area(car) across the panel
+                area5.X -= 19;// move the area(car) across the panel
+                area6.X += 16;// move the area(car) across the panel1
+                area7.X += 57;// move the area(train) across the panel
+                area8.X -= 57;// move the area(train) across the panel
+            }
+            if (level == 2)
+            {
+                area1.X -= 35;// move the area(car) across the panel
+                area2.X += 27;// move the area(car) across the panel
+                area3.X -= 28;// move the area(car) across the panel
+                area4.X += 22;// move the area(car) across the panel
+                area5.X -= 24;// move the area(car) across the panel
+                area6.X += 21;// move the area(car) across the panel
+                area7.X += 47;// move the area(train) across the panel
+                area8.X -= 47;// move the area(train) across the panel
+            }
+            if (level == 3)
+            {
+                area1.X -= 40;// move the area(car) across the panel
+                area2.X += 32;// move the area(car) across the panel
+                area3.X -= 33;// move the area(car) across the panel
+                area4.X += 27;// move the area(car) across the panel
+                area5.X -= 29;// move the area(car) across the panel
+                area6.X += 26;// move the area(car) across the panel
+                area7.X += 52;// move the area(train) across the panel
+                area8.X -= 52;// move the area(train) across the panel
+            }
+            if (level == 3)
+            {
+                area1.X -= 40;// move the area(car) across the panel
+                area2.X += 32;// move the area(car) across the panel
+                area3.X -= 33;// move the area(car) across the panel
+                area4.X += 27;// move the area(car) across the panel
+                area5.X -= 29;// move the area(car) across the panel
+                area6.X += 26;// move the area(car) across the panel
+                area7.X += 57;// move the area(train) across the panel
+                area8.X -= 57;// move the area(train) across the panel
+            }
             if (area1.X < -25) //AREA 1,3 AND 5 ARE CARS GOING LEFT
             {
                 area1.X = 500;
@@ -213,7 +250,8 @@ namespace Roadkill
             {
                 character1.X = 190;
                 character1.Y = 480;
-
+                level++;
+                LblLevel.Text = level.ToString();
             }
             // CHARACTER MOVEMENTS
 
