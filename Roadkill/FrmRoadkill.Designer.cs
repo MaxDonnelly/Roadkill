@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.LblLevel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.PnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,17 +160,27 @@
             // LblLevel
             // 
             this.LblLevel.AutoSize = true;
-            this.LblLevel.Location = new System.Drawing.Point(150, 7);
+            this.LblLevel.Location = new System.Drawing.Point(162, 7);
             this.LblLevel.Name = "LblLevel";
             this.LblLevel.Size = new System.Drawing.Size(13, 13);
             this.LblLevel.TabIndex = 9;
             this.LblLevel.Text = "1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(128, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Level:";
             // 
             // FrmRoadkill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 561);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.LblLevel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtName);
@@ -211,6 +222,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label LblLevel;
+        private System.Windows.Forms.Label label2;
     }
 }
 
