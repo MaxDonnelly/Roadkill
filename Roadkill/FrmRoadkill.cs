@@ -36,8 +36,8 @@ namespace Roadkill
         int x6 = 150, y6 = 400; //starting position of car5
         int x7 = 305, y7 = 361; //starting position of car6
         int x10 = 0, y10 = 15; //starting position of block1
-        int x8 = 250, y8 = 116; //starting position of train1
-        int x9 = 305, y9 = 307; //starting position of train2
+        int x8 = 250, y8 = 118; //starting position of train1
+        int x9 = 305, y9 = 309; //starting position of train2
         //Load our images from the bin\debug folder
         Image character = Image.FromFile(Application.StartupPath + @"\Characterstanding.png");
         Image car1 = Image.FromFile(Application.StartupPath + @"\Yellow car.png");
@@ -336,8 +336,8 @@ namespace Roadkill
             area4 = new Rectangle(x5, y5, 40, 25);//car4's rectangle size
             area5 = new Rectangle(x6, y6, 40, 25);//car5's rectangle size
             area6 = new Rectangle(x7, y7, 50, 27);//car6's rectangle size
-            area7 = new Rectangle(x8, y8, 190, 25);//train1's rectangle size 
-            area8 = new Rectangle(x9, y9, 190, 25);//train2's rectangle size
+            area7 = new Rectangle(x8, y8, 190, 20);//train1's rectangle size 
+            area8 = new Rectangle(x9, y9, 190, 20);//train2's rectangle size
             area9 = new Rectangle(x10, y10, 490, 10);//block1's rectangle size
             character1 = new Rectangle(x, y, 20, 15); //character's rectangle size
 
