@@ -330,7 +330,7 @@ namespace Roadkill
             InitializeComponent();
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PnlGame, new object[] { true });
-            area1 = new Rectangle(x2, y2, 43, 25);//car1's rectangle size	
+            area1 = new Rectangle(x2, y2, 44, 26);//car1's rectangle size	
             area2 = new Rectangle(x3, y3, 43, 23);//car2's rectangle size
             area3 = new Rectangle(x4, y4, 47, 27);//car3's rectangle size
             area4 = new Rectangle(x5, y5, 40, 25);//car4's rectangle size
