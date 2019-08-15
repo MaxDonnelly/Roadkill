@@ -89,19 +89,19 @@ namespace Roadkill
                 area7.X += 62;// move the area(train) across the panel
                 area8.X -= 62;// move the area(train) across the panel
             }
-            if (area1.X < -25) //AREA 1,3 AND 5 ARE CARS GOING LEFT
+            if (area1.X < -25) //Yellow car going left (boundaries)
             {
                 area1.X = 500;
             }
-            if (area3.X < -25)
+            if (area3.X < -25) //Police car going left
             {
                 area3.X = 500;
             }
-            if (area5.X < -25)
+            if (area5.X < -25) //Silver car going left
             {
                 area5.X = 500;
             }
-            if (area8.X < -300) //TRAIN2 GOING LEFT
+            if (area8.X < -300) //Bottom train going left
             {
                 area8.X = 500;
             }
@@ -128,6 +128,7 @@ namespace Roadkill
         {
             TmrCar.Enabled = true; //start the timer to move the cars
             TmrCharacter.Enabled = true; //start the timer to move the character
+            TxtName.Enabled = false;
         }
 
         private void MnuQuit_Click(object sender, EventArgs e)
@@ -281,7 +282,7 @@ namespace Roadkill
             }
             if (up) // if up arrow key pressed
             {
-                if (character1.Y < PnlGame.Height - 510)// is character within 40 of right side
+                if (character1.Y < PnlGame.Height - 510)// is character within 510 of Up side
                 {
                     character1.Y = PnlGame.Height - 510;
                 }
@@ -292,7 +293,7 @@ namespace Roadkill
             }
             if (down) // if down arrow key pressed
             {
-                if (character1.Y > PnlGame.Height - 40)// is character within 40 of right side
+                if (character1.Y > PnlGame.Height - 40)// is character within 40 of Down side
                 {
                     character1.Y = PnlGame.Height - 40;
                 }
