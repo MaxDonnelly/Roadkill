@@ -15,8 +15,8 @@ namespace Roadkill
     {
         Graphics g; // declare the graphics object
         int x = 190, y = 480;// starting position of character
-        int lives = 1;
-        int level = 1;
+        int lives = 1; //declare the amount of lvies
+        int level = 1; //declare the starting level
         bool left, right, up, down;
         //Declare the objects
         Rectangle area1;
@@ -89,52 +89,52 @@ namespace Roadkill
                 area7.X += 62;// move the area(train) across the panel
                 area8.X -= 62;// move the area(train) across the panel
             }
-            if (area1.X < -25) //Yellow car going left (boundaries)
+            if (area1.X < -25) //If Yellow car X < -25 from PnlGame 
             {
-                area1.X = 500;
+                area1.X = 500; //Respawn Yellow car at X = 500
             }
-            if (area3.X < -25) //Police car going left
+            if (area3.X < -25) //If Police car X < -25 from PnlGame
             {
-                area3.X = 500;
+                area3.X = 500; //Respawn Police car at X = 500
             }
-            if (area5.X < -25) //Silver car going left
+            if (area5.X < -25) //If Silver car X < -25 from PnlGame
             {
-                area5.X = 500;
+                area5.X = 500; //Respawn Silver car at X = 500
             }
-            if (area8.X < -300) //Bottom train going left
+            if (area8.X < -300) //If Bottom Train X < -300 from PnlGame
             {
-                area8.X = 500;
+                area8.X = 500; //Respawn Bottom Train at X = 500
             }
-            if (area2.X > 500) //AREA 2,4 AND 6 ARE CARS GOING RIGHT
+            if (area2.X > 500) //If Red car X > 500 from PnlGame
             {
-                area2.X = -25;
+                area2.X = -25; //Respawn Red car at X = -25
             }
-            if (area4.X > 500)
+            if (area4.X > 500) //If Blue car X > 500 from PnlGame
             {
-                area4.X = -25;
+                area4.X = -25; //Respawn Blue car at X = -25
             }
-            if (area6.X > 500)
+            if (area6.X > 500) //If White car X > 500 from PnlGame
             {
-                area6.X = -25;
+                area6.X = -25; //Respawn White car at X = -25
             }
-            if (area7.X > 500) //TRAIN1 GOING RIGHT
+            if (area7.X > 500) //If Top Train X > 500 from PnlGame
             {
-                area7.X = -300;
+                area7.X = -300; //Respawn Top Train at X = -300
             }
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
 
         private void MnuStart_Click(object sender, EventArgs e)
         {
-            TmrCar.Enabled = true; //start the timer to move the cars
-            TmrCharacter.Enabled = true; //start the timer to move the character
-            TxtName.Enabled = false;
+            TmrCar.Enabled = true; //Timer is enabled to move the cars
+            TmrCharacter.Enabled = true; //Timer is enabled to move the character
+            TxtName.Enabled = false; //Text box is Disabled
         }
 
         private void MnuQuit_Click(object sender, EventArgs e)
         {
-            TmrCar.Enabled = false;
-            TmrCharacter.Enabled = false;
+            TmrCar.Enabled = false; //Timer is Disabled
+            TmrCharacter.Enabled = false; //Timer is Disabled
             Application.Exit();//ends the program
         }
 
@@ -146,15 +146,15 @@ namespace Roadkill
         Image train2 = Image.FromFile(Application.StartupPath + @"\Train2.png");
         Image block1 = Image.FromFile(Application.StartupPath + @"\something.png");
 
-        //the CheckLives method will stop the planets and spaceship moving if there are no lives left
+        //The CheckLives method will stop the game if there are no lives left
         // and a game over message will be displayed  
         private void CheckLives()
         {
             if (lives == 0)
             {
-                TmrCharacter.Enabled = false;
-                TmrCar.Enabled = false;
-                MessageBox.Show("Game Over");
+                TmrCharacter.Enabled = false; //Timer is Disabled
+                TmrCar.Enabled = false; //Timer is Disabled
+                MessageBox.Show("Game Over"); //Shows Message Box
                 Application.Exit();//ends the program
             }
         }
@@ -249,8 +249,8 @@ namespace Roadkill
             }
             if (area9.IntersectsWith(character1))
             {
-                character1.X = 190;
-                character1.Y = 480;
+                character1.X = 190; //move character to 190 on X axis
+                character1.Y = 480; //move character to 480 on Y axis
                 level++;
                 LblLevel.Text = level.ToString();
             }
@@ -264,7 +264,7 @@ namespace Roadkill
                 }
                 else
                 {
-                    character1.X -= 5; //else move 5 to the left
+                    character1.X -= 5; //move character to the left
                 }
 
             }
@@ -273,33 +273,33 @@ namespace Roadkill
             {
                 if (character1.X > PnlGame.Width - 40)// is character within 40 of right side
                 {
-                    character1.X = PnlGame.Width - 40;
+                    character1.X = PnlGame.Width - 40;//if it is < 40 away "bounce" it (set position at 40)
                 }
                 else
                 {
-                    character1.X += 5;
+                    character1.X += 5; //move character 5 to the right
                 }
             }
             if (up) // if up arrow key pressed
             {
                 if (character1.Y < PnlGame.Height - 510)// is character within 510 of Up side
                 {
-                    character1.Y = PnlGame.Height - 510;
+                    character1.Y = PnlGame.Height - 510;//if it is < 510 away "bounce" it (set position at 510)
                 }
                 else
                 {
-                    character1.Y -= 5;
+                    character1.Y -= 5; //move character 5 upwards
                 }
             }
             if (down) // if down arrow key pressed
             {
                 if (character1.Y > PnlGame.Height - 40)// is character within 40 of Down side
                 {
-                    character1.Y = PnlGame.Height - 40;
+                    character1.Y = PnlGame.Height - 40;//if it is < 40 away "bounce" it (set position at 40)
                 }
                 else
                 {
-                    character1.Y += 5;
+                    character1.Y += 5; //move chracter 5 downwards
                 }
             }
             PnlGame.Invalidate();
