@@ -139,6 +139,29 @@ namespace Roadkill
         }
 
         Image car3 = Image.FromFile(Application.StartupPath + @"\Police Car.png");
+
+        private void TxtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar > 95 && e.KeyChar < 124)
+            {
+                //only display lowercase letters of the alphabet
+            }
+            else//entered a number or character that isnt in the alphabet
+            {
+                MessageBox.Show("Please enter lowercase letters only", "Error");
+                e.Handled = true;
+                TxtName.Focus();//Focus on name textbox
+            }
+
+            if (e.KeyChar > 12 && e.KeyChar < 14)//Enter key pressed
+            {
+                MessageBox.Show("Please press START button");
+                TxtName.Enabled = false;//deny access to name textbox
+
+            }
+
+        }
+
         Image car4 = Image.FromFile(Application.StartupPath + @"\Blue Car.png");
         Image car5 = Image.FromFile(Application.StartupPath + @"\Silver Car.png");
         Image car6 = Image.FromFile(Application.StartupPath + @"\White Car.png");
